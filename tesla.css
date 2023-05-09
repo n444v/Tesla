@@ -1,0 +1,314 @@
+@font-face {
+    font-family: 'Gotham SSm';
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+    src: url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-Bold_Web.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: 'Gotham SSm';
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+    src: url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-Medium_Web.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: 'Gotham SSm';
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+    src: url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-Book_Web.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: 'Gotham SSm';
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+    src: url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-Light_Web.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: 'Gotham SSm';
+    font-weight: 200;
+    font-display: swap;
+    font-style: normal;
+    src: url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-XLight_Web.woff2) format("woff2")
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Gotham SSm';
+    margin: auto;
+}
+
+html {
+   scroll-snap-type: y mandatory;
+   scroll-behavior: smooth; 
+}    
+
+#header-wrapper {
+    position: fixed;
+    width: 100vw;
+    margin-top: 20px;
+    /* position: absolute; */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    /* position: relative; */
+    font-weight: 700px;
+}
+
+
+#header-wrapper nav {
+    position: fixed; 
+    /* top: 0;
+    background-color: white;
+    width: 800px;
+    height: 100%;
+    transition: right .3s, opacity 2s;
+    opacity: 0;
+    padding: 10px; */
+}
+
+/* CHECKBOX THINGS & SIDE NAVIGATION */
+
+
+nav {
+    position: fixed;
+    right: -311px;
+    top: 0px;
+    background-color: white;
+    width: 311px;
+    height: 100%;
+    /* padding: 10px; */
+    /* padding-right: 300px; */
+    /* padding-top: 10px; */
+    transition: right .3s, opacity 2s;
+    opacity: 0;
+}
+
+nav #nav-header {
+    display: flex;
+    padding-top: 15px;
+    padding-right: 30px;
+    justify-content: right;
+}
+
+nav #nav-exit {
+    background-color: white;
+    padding: 8px 12px;
+}
+nav #nav-exit:hover {
+    background-color: rgba(0, 0, 0, 0.109);
+    padding: 8px 12px;
+    border-radius: 5px 5px;
+    transition-duration: 1.2s;
+    cursor: pointer;
+}
+
+nav ul {
+    /* display: flex;
+    flex-direction: column; */
+    list-style-type: none;
+    padding: 4px 24px;
+    
+}
+
+
+nav a {
+    font-family: 'Gotham SSm';
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: space-between;
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    margin: 15px;
+}
+
+nav a:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.109);
+    border-radius: 5px 5px;
+    transition-duration: 1.2s;
+}
+
+nav .nav-bottom {
+    font-family: 'Gotham SSm';
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: space-between;
+    text-decoration: none;
+    color: black;
+    margin-left: 24px;
+}
+
+
+
+#open-menu-checkbox:checked ~ nav {
+    right: 0;
+    opacity: 1;
+}
+
+#open-menu-checkbox {
+    display: none;
+}
+
+
+#blur-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: .3s;
+}
+
+#open-menu-checkbox:checked ~ #blur-overlay {
+    opacity: 1;
+    /* add filter behind element */
+    backdrop-filter: blur(3px);
+    /* "all" will stop on that current layer, nothing behind will be clickable */
+    pointer-events: all;
+}
+
+
+.nav-items-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0px 8px;
+    margin-left: 70px;
+}
+
+
+
+.nav-items-center li {
+    font-size: 14px;
+    padding: 8px 10px;
+    margin: 0px 8px;
+}
+
+.nav-items-center li:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.109);
+    border-radius: 5px 5px;
+    transition-duration: 1.2s;
+    
+}
+
+.nav-items-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0px 32px 0px 0px;
+}
+
+.nav-items-right li {
+    font-size: 14px;
+    padding: 8px 10px;
+    margin: 0px 8px;
+}
+
+.nav-items-right li:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.109);
+    border-radius: 5px 5px;
+    transition-duration: 1.2s;
+}
+
+
+.header > h1 {
+    padding: 0px 0px 0px 32px;
+}
+
+h1 > svg {
+    width: 120px;
+    height: 24px;
+}
+
+
+/* IMAGES */
+
+section:nth-of-type(1) {
+    background-image: url(tesla-images/first-photo.jpeg);
+}
+section:nth-of-type(2) {
+    background-image: url(tesla-images/second-photo.jpeg);
+}
+section:nth-of-type(3) {
+    background-image: url(tesla-images/third-photo.jpeg);
+}
+section:nth-of-type(4) {
+    background-image: url(tesla-images/fourth-photo.jpeg);
+}
+section:nth-of-type(5) {
+    background-image: url(tesla-images/fifth-photo.jpeg);
+}
+section:nth-of-type(6) {
+    background-image: url(tesla-images/sixth-photo.webp);
+}
+section:nth-of-type(7) {
+    background-image: url(tesla-images/seventh-photo.jpeg);
+}
+
+
+
+#homepage {
+    height: 100vh;
+}
+
+#homepage section {
+    display: flex;
+    scroll-snap-align: center;
+    flex-flow: column nowrap;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* display: flex;
+    flex-wrap: wrap; 
+    flex-direction: column;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: center;  */
+}
+    
+
+#homepage section > h1 {
+    font-size: 40px;
+    font-weight: 200px;
+    position: relative;
+    bottom: 35%;
+}
+
+
+#homepage section > a {
+    color: black;
+    font-weight: 200px;
+    position: relative;
+    bottom: 34%;
+} 

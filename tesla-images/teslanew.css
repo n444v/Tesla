@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#homepage section{
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+section:nth-of-type(1) {
+    background-image: url(tesla-images/first-photo.jpeg);
+}
+section:nth-of-type(2) {
+    background-image: url(tesla-images/second-photo.jpeg);
+}
+section:nth-of-type(3) {
+    background-image: url(tesla-images/third-photo.jpeg);
+}
+section:nth-of-type(4) {
+    background-image: url(tesla-images/fourth-photo.jpeg);
+}
+section:nth-of-type(5) {
+    background-image: url(tesla-images/fifth-photo.jpeg);
+}
+section:nth-of-type(6) {
+    background-image: url(tesla-images/sixth-photo.webp);
+}
+section:nth-of-type(7) {
+    background-image: url(tesla-images/seventh-photo.jpeg);
+}
