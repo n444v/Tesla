@@ -302,7 +302,7 @@ section:nth-of-type(7) {
     font-size: 40px;
     font-weight: 200px;
     position: relative;
-    bottom: 35%;
+    bottom: 70%;
 }
 
 
@@ -310,5 +310,5 @@ section:nth-of-type(7) {
     color: black;
     font-weight: 200px;
     position: relative;
-    bottom: 34%;
+    bottom: 70%;
 } 
